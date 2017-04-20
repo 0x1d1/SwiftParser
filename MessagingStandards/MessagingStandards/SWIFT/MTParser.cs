@@ -38,7 +38,7 @@ namespace MessagingStandards.SWIFT
 
                     else
                     {
-                        var newTag = message.Substring(index, result);
+                        var newTag = message.Substring(index, (result - index));
                         listOfTags.Add(newTag.TrimAllNewLines());
                         index = result;
                         _isTag = false;
